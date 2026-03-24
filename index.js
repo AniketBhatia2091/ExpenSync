@@ -83,8 +83,20 @@ if (scroller) {
 // ── Notify form ───────────────────────────────────
 function handleNotify(e) {
   e.preventDefault();
-  document.getElementById('notifyForm').style.display = 'none';
-  document.getElementById('notifySuccess').style.display = 'block';
+  
+  const form = document.getElementById('notifyForm');
+  const formData = new FormData(form);
+
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(formData).toString()
+  })
+  .then(() => {
+    form.style.display = 'none';
+    document.getElementById('notifySuccess').style.display = 'block';
+  })
+  .catch(error => console.error('Form submit error:', error));
 }
 
 // ── Parallax blobs ────────────────────────────────
