@@ -3,22 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ExpenSync – Split smarter. Settle faster.</title>
-  <meta name="description" content="ExpenSync is the intelligent iOS expense tracker. Scan receipts with AI, import bank SMS, and split bills in seconds with TapSplit." />
+  <title>ExpenSync – Expense Tracker &amp; TapSplit for iOS</title>
+  <meta name="description" content="ExpenSync is now available on the iOS App Store! Scan receipts, import bank SMS, and split bills in seconds with local P2P TapSplit." />
   <meta property="og:title" content="ExpenSync – Split smarter. Settle faster." />
-  <meta property="og:description" content="Smart expense tracking for iOS. OCR, SMS import, TapSplit." />
+  <meta property="og:description" content="Now available on the App Store. Intelligent expense tracking for iOS. OCR, SMS import, TapSplit." />
+  <meta name="theme-color" content="#000000" />
   <link rel="icon" href="images/expensync%202.png" />
   <link rel="stylesheet" href="index.css" />
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
 </head>
 <body>
 
   <!-- ══ MOBILE NAV ══ -->
   <div class="mobile-nav" id="mobileNav">
-    <button class="mobile-close" id="mobileClose">✕</button>
+    <button class="mobile-close" id="mobileClose" aria-label="Close menu">✕</button>
     <a href="#features" onclick="closeMobileNav()">Features</a>
     <a href="#screenshots" onclick="closeMobileNav()">Screenshots</a>
     <a href="#tapsplit" onclick="closeMobileNav()">TapSplit</a>
-    <a href="#notify" onclick="closeMobileNav()">Get Notified</a>
+    <a href="#download" onclick="closeMobileNav()">Download Now</a>
   </div>
 
   <!-- ══ NAVBAR ══ -->
@@ -32,14 +34,14 @@
         <li><a href="#features">Features</a></li>
         <li><a href="#screenshots">Screenshots</a></li>
         <li><a href="#tapsplit">TapSplit</a></li>
-        <li><a href="#notify">Get Notified</a></li>
+        <li><a href="#download">Download</a></li>
       </ul>
       <div class="nav-cta">
-        <a href="#notify" class="nav-badge">
-          <span class="badge-dot"></span>
-          Coming Soon
+        <a href="https://apps.apple.com/in/app/expensesync/id6760542392" class="nav-badge" target="_blank" rel="noopener">
+          <span class="badge-dot" style="background: #34c759;"></span>
+          Download Now
         </a>
-        <div class="hamburger" id="hamburger">
+        <div class="hamburger" id="hamburger" role="button" aria-label="Open menu" tabindex="0">
           <span></span><span></span><span></span>
         </div>
       </div>
@@ -55,16 +57,16 @@
     <div class="container hero-inner">
       <!-- Left Content -->
       <div class="hero-copy">
-        <div class="ios-pill coming-soon-pill">
-          <span class="pulse-dot"></span>
-          Coming Soon to the App Store
+        <div class="ios-pill available-pill">
+          <span class="badge-dot" style="background: #34c759; animation: none;"></span>
+          Available on the App Store
         </div>
         <h1>Split smarter.<br /><span class="gradient-text">Settle faster.</span></h1>
-        <p class="hero-sub">ExpenSync is the iOS app that automatically captures expenses from your bank SMS, scans receipts with Apple Intelligence, and lets you split bills with nearby friends — no internet needed.</p>
+        <p class="hero-sub">ExpenSync is the iOS app that automatically captures expenses from your bank SMS, scans receipts, and lets you split bills with nearby friends — no internet needed.</p>
         <div class="hero-ctas">
-          <a href="#notify" class="cta-primary">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg>
-            Get Notified at Launch
+          <a href="https://apps.apple.com/in/app/expensesync/id6760542392" class="cta-primary app-store-btn" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M18.71,19.5c-0.83,1.24-1.71,2.45-3.1,2.48c-1.34,0.03-1.77-0.79-3.29-0.79c-1.53,0-1.99,0.76-3.27,0.82 c-1.31,0.05-2.31-1.32-3.14-2.53C4.25,17.05,2.97,12.45,4.64,9.55C5.47,8.12,6.95,7.21,8.55,7.19c1.23-0.02,2.38,0.83,3.13,0.83 c0.76,0,2.15-1.04,3.61-0.89c0.61,0.03,2.32,0.25,3.42,1.86c-0.09,0.06-2.04,1.19-2.02,3.56c0.03,2.83,2.46,3.82,2.48,3.83 C19.14,17.41,18.73,18.49,18.71,19.5z M13,3.5c0.62-0.76,1.04-1.81,0.92-2.86c-0.9,0.04-1.98,0.6-2.63,1.36 c-0.58,0.67-1.09,1.75-0.97,2.77C11.3,4.81,12.35,4.3,13,3.5z"/></svg>
+            Download on the App Store
           </a>
           <a href="#features" class="cta-ghost">Explore Features →</a>
         </div>
@@ -73,7 +75,7 @@
           <div class="metric">
             <span class="metric-icon">🤖</span>
             <div>
-              <strong>On-Device AI</strong>
+              <strong>On-Device Only</strong>
               <span>No cloud, fully private</span>
             </div>
           </div>
@@ -127,14 +129,14 @@
       <!-- Big feature rows -->
       <div class="big-feature reveal">
         <div class="big-feature-img">
-          <img src="images/ExpenSync-8-LOG.png" alt="Log Expenses" />
+          <img src="images/ExpenSync-8-LOG.png" alt="Log Expenses" loading="lazy" />
         </div>
         <div class="big-feature-copy">
           <div class="feature-label">Smart Logging</div>
           <h3>Capture expenses<br />in seconds.</h3>
-          <p>Scan a receipt and Apple Intelligence extracts the vendor, amount, date, and category instantly — all on-device, zero upload. Or let ExpenSync silently read your bank SMS messages and auto-log every transaction.</p>
+          <p>Scan a receipt to extract the vendor, amount, date, and category instantly — all on-device, zero upload. Or let ExpenSync silently read your bank SMS messages and auto-log every transaction.</p>
           <div class="feature-chips">
-            <span>📸 OCR Scanning</span>
+            <span>📸 Receipt Scanning</span>
             <span>💬 SMS Import</span>
             <span>✏️ Manual Entry</span>
           </div>
@@ -152,7 +154,7 @@
           </div>
         </div>
         <div class="big-feature-img">
-          <img src="images/ExpenSync-5-CATEGORY.png" alt="Category Charts" />
+          <img src="images/ExpenSync-5-CATEGORY.png" alt="Category Charts" loading="lazy" />
         </div>
       </div>
 
@@ -160,7 +162,7 @@
       <div class="feat-cards reveal">
         <div class="feat-card">
           <div class="feat-card-img">
-            <img src="images/ExpenSync-9-SECURE.png" alt="Secure" />
+            <img src="images/ExpenSync-9-SECURE.png" alt="Secure" loading="lazy" />
           </div>
           <div class="feat-card-body">
             <div class="feat-icon">🔒</div>
@@ -170,22 +172,22 @@
         </div>
         <div class="feat-card">
           <div class="feat-card-img">
-            <img src="images/ExpenSync-13-TRACK.png" alt="Track" />
+            <img src="images/ExpenSync-13-TRACK.png" alt="Track Expenses" loading="lazy" />
           </div>
           <div class="feat-card-body">
-            <div class="feat-icon">☁️</div>
-            <h4>Offline-First Sync</h4>
-            <p>Create expenses with no signal. SyncManager queues them and pushes to the cloud the moment you reconnect.</p>
+            <div class="feat-icon">🔍</div>
+            <h4>Track Expenses</h4>
+            <p>View all group expenses, filter spending by member, and instantly check everyone's payment status.</p>
           </div>
         </div>
         <div class="feat-card">
           <div class="feat-card-img">
-            <img src="images/ExpenSync-12-MANAGE.png" alt="Manage" />
+            <img src="images/ExpenSync-12-MANAGE.png" alt="Manage Members" loading="lazy" />
           </div>
           <div class="feat-card-body">
-            <div class="feat-icon">🏆</div>
-            <h4>XP & Levels</h4>
-            <p>Earn XP for every receipt scanned, SMS imported, or session created. Rise through finance ranks.</p>
+            <div class="feat-icon">👥</div>
+            <h4>Manage Members</h4>
+            <p>Easily add teammates to any session, monitor their status, and control session access instantly.</p>
           </div>
         </div>
       </div>
@@ -203,16 +205,20 @@
     </div>
     <div class="screenshots-scroll reveal">
       <div class="screenshots-track">
-        <div class="ss-item"><img src="images/ExpenSync-4-SPEND.png" alt="Spend" /></div>
-        <div class="ss-item"><img src="images/ExpenSync-5-CATEGORY.png" alt="Category" /></div>
-        <div class="ss-item"><img src="images/ExpenSync-8-LOG.png" alt="Log" /></div>
-        <div class="ss-item"><img src="images/ExpenSync-1-TAP-&-SPLIT.png" alt="TapSplit" /></div>
+        <div class="ss-item"><img src="images/ExpenSync-4-SPEND.png" alt="Spend Dashboard" /></div>
+        <div class="ss-item"><img src="images/ExpenSync-5-CATEGORY.png" alt="Category Insights" /></div>
+        <div class="ss-item"><img src="images/ExpenSync-8-LOG.png" alt="Log Expenses" /></div>
+        <div class="ss-item"><img src="images/ExpenSync-11-IMPORT.png" alt="Import Session" /></div>
+        <div class="ss-item"><img src="images/ExpenSync-6-ACTIVE.png" alt="Active Sessions" /></div>
+        <div class="ss-item"><img src="images/ExpenSync-3-GROUP.png" alt="Group Session" /></div>
+        <div class="ss-item"><img src="images/ExpenSync-7-ADD-MEMBERS.png" alt="Add Members" /></div>
+        <div class="ss-item"><img src="images/ExpenSync-12-MANAGE.png" alt="Manage Members" /></div>
+        <div class="ss-item"><img src="images/ExpenSync-1-TAP-&-SPLIT.png" alt="Tap and Split" /></div>
         <div class="ss-item"><img src="images/ExpenSync-2-SETTLE.png" alt="Settle" /></div>
-        <div class="ss-item"><img src="images/ExpenSync-3-GROUP.png" alt="Group" /></div>
-        <div class="ss-item"><img src="images/ExpenSync-10-COMPLETE.png" alt="Complete" /></div>
-        <div class="ss-item"><img src="images/ExpenSync-11-IMPORT.png" alt="Import" /></div>
-        <div class="ss-item"><img src="images/ExpenSync-13-TRACK.png" alt="Track" /></div>
         <div class="ss-item"><img src="images/ExpenSync-14-SETTLE.png" alt="Final Settle" /></div>
+        <div class="ss-item"><img src="images/ExpenSync-10-COMPLETE.png" alt="Session Complete" /></div>
+        <div class="ss-item"><img src="images/ExpenSync-13-TRACK.png" alt="Track Expenses" /></div>
+        <div class="ss-item"><img src="images/ExpenSync-9-SECURE.png" alt="Secure Profile" /></div>
       </div>
     </div>
   </section>
@@ -276,9 +282,9 @@
       <div class="hiw-steps reveal">
         <div class="hiw-step">
           <div class="hiw-step-num">01</div>
-          <div class="hiw-step-img"><img src="images/ExpenSync-11-IMPORT.png" alt="Import" /></div>
+          <div class="hiw-step-img"><img src="images/ExpenSync-8-LOG.png" alt="Capture Expense" /></div>
           <h4>Capture</h4>
-          <p>Scan a receipt, import an SMS, or log manually. AI handles the extraction.</p>
+          <p>Scan a receipt, import an SMS, or log manually in seconds.</p>
         </div>
         <div class="hiw-arrow">→</div>
         <div class="hiw-step">
@@ -298,30 +304,35 @@
     </div>
   </section>
 
-  <!-- ══ NOTIFY / CTA ══ -->
-  <section class="section notify-section" id="notify">
+  <!-- ══ DOWNLOAD / CTA ══ -->
+  <section class="section notify-section" id="download">
     <div class="container">
       <div class="notify-card reveal">
         <div class="notify-img-col">
-          <img src="images/ExpenSync-6-ACTIVE.png" alt="Active Sessions" />
+          <img src="images/ExpenSync-6-ACTIVE.png" alt="Active Sessions" class="notify-poster" loading="lazy" />
         </div>
         <div class="notify-copy">
-          <div class="ios-pill">Coming Soon</div>
-          <h2>Be the first<br /><span class="gradient-text">to know.</span></h2>
-          <p>ExpenSync is launching on the App Store soon. Leave your email and we'll notify you on day one — free.</p>
-          <form class="notify-form" id="notifyForm" name="notify" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleNotify(event)">
-            <input type="hidden" name="form-name" value="notify" />
+          <div class="ios-pill">Available Now</div>
+          <h2>Get started<br /><span class="gradient-text">today.</span></h2>
+          <p>ExpenSync is now live on the App Store. Experience the simplest way to track and split expenses with your friends offline.</p>
+          
+          <div class="notify-input-group" style="margin-bottom: 32px;">
+            <a href="https://apps.apple.com/in/app/expensesync/id6760542392" class="cta-primary app-store-btn" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M18.71,19.5c-0.83,1.24-1.71,2.45-3.1,2.48c-1.34,0.03-1.77-0.79-3.29-0.79c-1.53,0-1.99,0.76-3.27,0.82 c-1.31,0.05-2.31-1.32-3.14-2.53C4.25,17.05,2.97,12.45,4.64,9.55C5.47,8.12,6.95,7.21,8.55,7.19c1.23-0.02,2.38,0.83,3.13,0.83 c0.76,0,2.15-1.04,3.61-0.89c0.61,0.03,2.32,0.25,3.42,1.86c-0.09,0.06-2.04,1.19-2.02,3.56c0.03,2.83,2.46,3.82,2.48,3.83 C19.14,17.41,18.73,18.49,18.71,19.5z M13,3.5c0.62-0.76,1.04-1.81,0.92-2.86c-0.9,0.04-1.98,0.6-2.63,1.36 c-0.58,0.67-1.09,1.75-0.97,2.77C11.3,4.81,12.35,4.3,13,3.5z"/></svg>
+              Download on the App Store
+            </a>
+          </div>
+
+          <p class="notify-hint" style="margin-bottom: 12px; font-weight: 600; color: var(--text-2);">Stay updated with new features:</p>
+          <form class="notify-form" id="notifyForm" name="updates" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleNotify(event)">
+            <input type="hidden" name="form-name" value="updates" />
             <p style="display: none;"><label>Don’t fill this out if you're human: <input name="bot-field" /></label></p>
             <div class="notify-input-group">
               <input type="email" id="notifyEmail" name="email" placeholder="your@email.com" required autocomplete="email" />
-              <button type="submit" class="cta-primary">
-                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg>
-                Notify Me
-              </button>
+              <button type="submit" class="cta-primary">Subscribe</button>
             </div>
           </form>
-          <p class="notify-success" id="notifySuccess" style="display:none;">🎉 You&apos;re on the list! We'll reach out when ExpenSync launches.</p>
-          <p class="notify-hint">No spam. Unsubscribe anytime.</p>
+          <p class="notify-success" id="notifySuccess" style="display:none;">🎉 You're on the list! We'll keep you posted on new features.</p>
         </div>
       </div>
     </div>
@@ -341,8 +352,8 @@
         <a href="#features">Features</a>
         <a href="#screenshots">Screenshots</a>
         <a href="#tapsplit">TapSplit</a>
-        <a href="../privacy.html">Privacy Policy</a>
-        <a href="../support.html">Help & Support</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="support.html">Help &amp; Support</a>
       </div>
       <div class="footer-copy">© 2025 ExpenSync. Made with ♥ for iOS.</div>
     </div>

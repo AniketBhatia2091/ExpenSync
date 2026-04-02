@@ -56,6 +56,7 @@ if (scroller) {
   let isDown = false, startX, scrollLeft;
 
   scroller.addEventListener('mousedown', e => {
+    e.preventDefault();
     isDown = true;
     scroller.style.cursor = 'grabbing';
     startX = e.pageX - scroller.offsetLeft;
@@ -75,8 +76,9 @@ if (scroller) {
   let touchStart = 0;
   scroller.addEventListener('touchstart', e => { touchStart = e.touches[0].clientX; }, { passive: true });
   scroller.addEventListener('touchmove', e => {
-    const diff = touchStart - e.touches[0].clientX;
-    scroller.scrollLeft += diff * 0.5;
+    const currentX = e.touches[0].clientX;
+    scroller.scrollLeft += (touchStart - currentX) * 0.5;
+    touchStart = currentX;
   }, { passive: true });
 }
 
@@ -99,11 +101,13 @@ function handleNotify(e) {
   .catch(error => console.error('Form submit error:', error));
 }
 
-// ── Parallax blobs ────────────────────────────────
-const blob1 = document.querySelector('.hero-blob-1');
-const blob2 = document.querySelector('.hero-blob-2');
+// ── Parallax blobs (uses CSS custom properties to avoid overriding keyframe transforms) ──
 window.addEventListener('scroll', () => {
   const y = window.scrollY;
-  if (blob1) blob1.style.transform = `translateY(${y * 0.12}px)`;
-  if (blob2) blob2.style.transform = `translateY(${-y * 0.08}px)`;
+  document.documentElement.style.setProperty('--blob1-y', `${y * 0.12}px`);
+  document.documentElement.style.setProperty('--blob2-y', `${-y * 0.08}px`);
 }, { passive: true });
+
+// ── Dynamic copyright year ────────────────────────
+const footerCopy = document.querySelector('.footer-copy');
+if (footerCopy) footerCopy.textContent = `© ${new Date().getFullYear()} ExpenSync. Made with ♥ for iOS.`;
